@@ -30,8 +30,9 @@ export class TodoApp extends React.Component {
   };
 
   deleteTodo = id => {
+    const { todos } = this.state;
     this.setState({
-      todos: this.state.todos.filter(todo => {
+      todos: todos.filter(todo => {
         return todo.id !== id;
       })
     });
